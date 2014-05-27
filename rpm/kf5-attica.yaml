@@ -1,0 +1,62 @@
+Name         : kf5-attica
+Version      : 4.99.0
+Release      : 1
+Group        : System/Base
+License      : LGPLv2+
+Summary      : KDE Frameworks Tier 1 Addon with Open Collaboration Services API
+Description  : |
+  Attica is a Qt library that implements the Open Collaboration Services
+  API version 1.4.
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc AUTHORS COPYING README.md"
+    - "%{_kf5_libdir}/libKF5Attica.so.*"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications |
+        that use %{name}.
+      Files:
+          - "%{_kf5_libdir}/cmake/KF5Attica/"
+          - "%{_kf5_includedir}/attica_version.h"
+          - "%{_kf5_includedir}/Attica/"
+          - "%{_kf5_libdir}/libKF5Attica.so"
+          - "%{_datadir}/qt5/mkspecs/modules/qt_Attica.pri"
+          - "%{_kf5_libdir}/pkgconfig/libKF5Attica.pc"
