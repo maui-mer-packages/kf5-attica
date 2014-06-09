@@ -9,7 +9,7 @@ Name:       kf5-attica
 # << macros
 
 Summary:    KDE Frameworks Tier 1 Addon with Open Collaboration Services API
-Version:    4.99.0
+Version:    4.100.0
 Release:    1
 Group:      System/Base
 License:    LGPLv2+
