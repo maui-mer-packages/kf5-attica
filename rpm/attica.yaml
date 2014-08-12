@@ -1,5 +1,5 @@
-Name         : kf5-attica
-Version      : 5.0.0
+Name         : attica
+Version      : 5.1.0
 Release      : 1
 Group        : System/Base
 License      : LGPLv2+
@@ -51,12 +51,12 @@ SubPackages:
       Group: Development/Libraries
       Summary: Development files for %{name}
       Description: |
-        The %{name}-devel package contains the files necessary to develop applications |
+        The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Files:
-          - "%{_kf5_libdir}/cmake/KF5Attica/"
+          - "%{_kf5_cmakedir}/KF5Attica/"
           - "%{_kf5_includedir}/attica_version.h"
           - "%{_kf5_includedir}/Attica/"
           - "%{_kf5_libdir}/libKF5Attica.so"
-          - "%{_datadir}/qt5/mkspecs/modules/qt_Attica.pri"
+          - "%{_kf5_mkspecsdir}/qt_Attica.pri"
           - "%{_kf5_libdir}/pkgconfig/libKF5Attica.pc"
