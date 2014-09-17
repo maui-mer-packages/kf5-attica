@@ -8,8 +8,14 @@ Name:       attica
 # >> macros
 # << macros
 
+# >> bcond_with
+# << bcond_with
+
+# >> bcond_without
+# << bcond_without
+
 Summary:    KDE Frameworks Tier 1 Addon with Open Collaboration Services API
-Version:    5.1.0
+Version:    5.2.0
 Release:    1
 Group:      System/Base
 License:    LGPLv2+
