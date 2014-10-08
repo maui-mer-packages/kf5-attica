@@ -9,7 +9,7 @@ Name:       attica
 # << macros
 
 Summary:    KDE Frameworks Tier 1 Addon with Open Collaboration Services API
-Version:    5.2.0
+Version:    5.3.0
 Release:    1
 Group:      System/Base
 License:    LGPLv2+
