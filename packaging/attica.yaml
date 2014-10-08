@@ -8,7 +8,6 @@ Description  : |
   Attica is a Qt library that implements the Open Collaboration Services
   API version 1.4.
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
 
 Sources:
     - "%{name}-%{version}.tar.xz"
